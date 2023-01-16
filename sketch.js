@@ -21,6 +21,11 @@ function onChangeInput() {
   i = new Date();
   if (egg) egg = !egg;
   let v = this.value();
+  if (v.length <= 4) {
+    
+  } else {
+    this.value(v.substring(0, v.length - 1));
+  }
   if (!isNaN(v)) {
     const hours = v.substring(0, 2);
     const minutes = v.substring(2, 4);
